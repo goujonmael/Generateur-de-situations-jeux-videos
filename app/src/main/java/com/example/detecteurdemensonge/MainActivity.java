@@ -35,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 if (UnityAds.isReady()) {
                     UnityAds.show(MainActivity.this);
+                    Toast.makeText(MainActivity.this, "ADS REEEADY", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         mytextview.setTextColor(Color.RED);
                     }
                     else if (nb == 8){
-                        mytextview.setText("Entre Guerres");
+                        mytextview.setText("Entre guerre/guerre mondiale ");
                         mytextview.setTextColor(Color.RED);
                     }else if (nb == 9){
                         mytextview.setText("70/80");
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Random random2 = new Random();
                 int nb2;
-                nb2 = random.nextInt(15);
+                nb2 = random.nextInt(10);
                 TextView mytextview2 = (TextView)findViewById(R.id.mytextview2);
                 if (nb2 == 1) {
                     mytextview2.setText("RPG");
@@ -133,34 +135,21 @@ public class MainActivity extends AppCompatActivity {
                     mytextview2.setTextColor(Color.RED);
                 }
                 else if (nb2 == 8){
-                    mytextview2.setText("Entre Guerres");
+                    mytextview2.setText("Mmorpg");
                     mytextview2.setTextColor(Color.RED);
                 }else if (nb2 == 9){
-                    mytextview2.setText("70/80");
+                    mytextview2.setText("RTS");
                     mytextview2.setTextColor(Color.RED);
                 }else if (nb2 == 10){
-                    mytextview2.setText("Féodale Asiatique");
-                    mytextview2.setTextColor(Color.RED);
-                }else if (nb2 == 11){
-                    mytextview2.setText("Égypte Antique");
-                    mytextview2.setTextColor(Color.RED);
-                }else if (nb2 == 12){
-                    mytextview2.setText("Début Moyen Age");
-                    mytextview2.setTextColor(Color.RED);
-                }else if (nb2 == 13){
-                    mytextview2.setText("Héroïque Fantaisie");
-                    mytextview2.setTextColor(Color.RED);
-                }else if (nb2 == 14){
-                    mytextview2.setText("Post Appocalyptique");
-                    mytextview2.setTextColor(Color.RED);
-                }else if (nb2 == 15){
-                    mytextview2.setText("Far West");
+                    mytextview2.setText("Card Game");
                     mytextview2.setTextColor(Color.RED);
                 }
                     UnityAds.initialize(MainActivity.this, "3815613", unityAdsListener);
 
 
+                
             }
+
         });
     }
     private class UnityAdsListener implements IUnityAdsListener{
